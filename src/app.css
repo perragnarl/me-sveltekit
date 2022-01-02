@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply p-0 font-fira-mono text-charcoal text-lg md:text-2xl md:leading-10 ;
+}
+h1 {
+	@apply text-6xl font-black -rotate-2 mb-16 font-poppins;
+}
+h2 {
+	@apply text-2xl md:text-3xl font-black mb-7;
+}
+h3 {
+	@apply text-xl font-black mb-1;
+}
+section {
+	@apply mb-20;
+}
+a {
+	@apply hover:bg-charcoal hover:text-beige;
+}
+p {
+	@apply mb-8;
+}

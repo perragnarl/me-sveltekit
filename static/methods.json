@@ -1,0 +1,12 @@
+[
+	{
+		"name": "HTML",
+		"icon": "html",
+		"asterisk": false
+	},
+	{
+		"name": "CSS",
+		"icon": "css",
+		"asterisk": false
+	}
+]

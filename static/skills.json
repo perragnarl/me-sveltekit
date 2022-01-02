@@ -1,0 +1,22 @@
+[
+	{
+		"name": "HTML",
+		"icon": "html",
+		"asterisk": false
+	},
+	{
+		"name": "CSS",
+		"icon": "css",
+		"asterisk": false
+	},
+	{
+		"name": "Vue",
+		"icon": "vue",
+		"asterisk": false
+	},
+	{
+		"name": "Docker",
+		"icon": "check",
+		"asterisk": true
+	}
+]
