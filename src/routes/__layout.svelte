@@ -1,4 +1,5 @@
 <script>
+	import { page } from '$app/stores';
 	import '../app.css';
 	import '@fontsource/poppins/900.css'
 	import '@fontsource/fira-mono'
@@ -7,7 +8,7 @@
 	import Footer from '$lib/components/footer/Footer.svelte';
 </script>
 
-<Header />
+<Header type={$page.path === '/' ? 'extended' : 'default'}/>
 
 <main class="max-w-4xl m-auto p-8">
 	<slot />

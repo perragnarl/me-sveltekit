@@ -1,31 +1,37 @@
 <script>
 	import Icon from "$lib/components/icon/Icon.svelte";
+	import Logo from "$lib/components/logo/Logo.svelte";
 </script>
 
-<footer class="bg-charcoal text-beige">
-	<section class="max-w-4xl m-auto px-8 py-12">
-		<h2>Kontakt</h2>
-		<ul class="flex gap-4 flex-wrap">
-			<li>
-				<!-- <Icon name="mail" plate={false} extraClass="mr-3" /> -->
-				<a href="mailto:hej@perragnarlindfors.se">
-					hej@perragnarlindfors.se
-				</a>
-			</li>
+<footer class="bg-charcoal text-beige p-8 border-[1.5rem] border-white">
+	<section class="max-w-7xl mx-auto pt-8 pb-4">
+		<div class="mb-6 flex justify-end">
+			<Logo />
+		</div>
+		<div>
+			<h2>Kontakt</h2>
+			<ul class="flex gap-4 flex-wrap">
+				<li>
+					<Icon name="mail" />
+					<a href="mailto:hej@perragnarlindfors.se">
+						hej@perragnarlindfors.se
+					</a>
+				</li>
 
-			<li class="md:ml-auto mr-4 text-right">
-				<!-- <Icon name="linkedin" plate={false} extraClass="mr-3" /> -->
-				<a href="https://www.linkedin.com/in/perragnarj/">
-					LinkedIn
-				</a>
-			</li>
+				<li class="md:ml-auto mr-4 text-right">
+					<Icon name="linkedin" />
+					<a href="https://www.linkedin.com/in/perragnarj/">
+						LinkedIn
+					</a>
+				</li>
 
-			<li>
-				<!-- <Icon name="github" plate={false} extraClass="mr-3" /> -->
-				<a href="https://github.com/perragnarl">
-					Github
-				</a>
-			</li>
-		</ul>
+				<li>
+					<Icon name="github" />
+					<a href="https://github.com/perragnarl">
+						Github
+					</a>
+				</li>
+			</ul>
+		</div>
 	</section>
 </footer>

@@ -1,13 +1,14 @@
 <script>
 	import Icon from '$lib/components/icon/Icon.svelte';
 
-	export let name,
-		icon,
-		asterisk = false;
+	export let name;
+	export let icon;
+	export let iconBakground;
+	export let asterisk = false;
 </script>
 
 <li class="flex items-center">
-	<Icon extraClass="mr-3">{@html icon}</Icon>
+	<Icon name={icon} appearance={'mr-4 ' + iconBakground}></Icon>
 	{name}
 	{#if asterisk}*{/if}
 </li>

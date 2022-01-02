@@ -3,7 +3,7 @@
 	import queries from '$lib/queries/queries';
 
 	export async function load() {
-		const graphcms = new GraphQLClient('https://api-eu-central-1.graphcms.com/v2/ckxw5joan0l4r01yua0tn5qai/master');
+		const graphcms = new GraphQLClient(import.meta.env.VITE_GRAPHCMS_API);
 
 		const skills = await graphcms.request(gql`${queries.skills}`);
 		const languages = await graphcms.request(gql`${queries.languages}`);
@@ -36,7 +36,7 @@
 
 <section id="skills">
 	<h2>Mjukvara</h2>
-	<List data={skills} />
+	<List data={skills} iconBackground="bg-pale-red"/>
 </section>
 
 <!-- <section id="methods">
@@ -51,7 +51,7 @@
 
 <section id="languages">
 	<h2>Språk</h2>
-	<List data={languages} />
+	<List data={languages} iconBackground="bg-pale-green" />
 </section>
 
 <!-- <section id="interests">
