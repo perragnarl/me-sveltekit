@@ -24,6 +24,6 @@
 </svelte:head>
 
 {#each posts as post}
-	<h2>{post.title}</h2>
+	<h2><a href={`/blog/${post.slug}`}>{post.title}</a></h2>
 	{post.body}
 {/each}

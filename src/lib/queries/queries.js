@@ -25,9 +25,19 @@ const queries = {
 				title
 				body
 				createdAt
+				slug
+			}
+		}
+	`,
+	post: `
+		{
+			post(where: {slug: ""}) {
+			title
+			body
+			createdAt
 			}
 		}
 	`
-}
+};
 
 export default queries;

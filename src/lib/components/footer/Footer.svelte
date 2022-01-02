@@ -12,21 +12,21 @@
 			<h2>Kontakt</h2>
 			<ul class="flex gap-4 flex-wrap">
 				<li>
-					<Icon name="mail" />
+					<Icon name="mail" background={false} appearance="mr-2" />
 					<a href="mailto:hej@perragnarlindfors.se">
 						hej@perragnarlindfors.se
 					</a>
 				</li>
 
 				<li class="md:ml-auto mr-4 text-right">
-					<Icon name="linkedin" />
+					<Icon name="linkedin" background={false} appearance="mr-2" />
 					<a href="https://www.linkedin.com/in/perragnarj/">
 						LinkedIn
 					</a>
 				</li>
 
 				<li>
-					<Icon name="github" />
+					<Icon name="github" background={false} appearance="mr-2" />
 					<a href="https://github.com/perragnarl">
 						Github
 					</a>
@@ -35,3 +35,9 @@
 		</div>
 	</section>
 </footer>
+
+<style lang="postcss">
+	li {
+		@apply flex items-center;
+	}
+</style>

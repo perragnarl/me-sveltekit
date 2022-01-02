@@ -8,7 +8,7 @@
 </script>
 
 <li class="flex items-center">
-	<Icon name={icon} appearance={'mr-4 ' + iconBakground}></Icon>
+	<Icon name={icon} appearance={'mr-4 ' + iconBakground} />
 	{name}
 	{#if asterisk}*{/if}
 </li>
