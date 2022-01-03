@@ -3,7 +3,7 @@
 	import queries from '$lib/queries/queries';
 
 	export async function load() {
-		const graphcms = new GraphQLClient(import.meta.env.VITE_GRAPHCMS_API);
+		const graphcms = new GraphQLClient('https://api-eu-central-1.graphcms.com/v2/ckxw5joan0l4r01yua0tn5qai/master');
 
 		const skills = await graphcms.request(
 			gql`

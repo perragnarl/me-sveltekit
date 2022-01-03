@@ -3,7 +3,7 @@
 
 	export async function load({ page }) {
 		const slug = page.params.slug;
-		const graphcms = new GraphQLClient(import.meta.env.VITE_GRAPHCMS_API);
+		const graphcms = new GraphQLClient('https://api-eu-central-1.graphcms.com/v2/ckxw5joan0l4r01yua0tn5qai/master');
 
 		const { post } = await graphcms.request(gql`
 			{
