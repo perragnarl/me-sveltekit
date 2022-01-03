@@ -1,31 +1,16 @@
 <script context="module">
-	import { GraphQLClient, gql } from 'graphql-request';
-	import queries from '$lib/queries/queries';
+	import { GraphQLClient } from 'graphql-request';
+	import { getResume } from '$lib/queries/queries';
 
 	export async function load() {
 		const graphcms = new GraphQLClient('https://api-eu-central-1.graphcms.com/v2/ckxw5joan0l4r01yua0tn5qai/master');
-
-		const skills = await graphcms.request(
-			gql`
-				${queries.skills}
-			`
-		);
-		const languages = await graphcms.request(
-			gql`
-				${queries.languages}
-			`
-		);
-		const timeline = await graphcms.request(
-			gql`
-				${queries.timeline}
-			`
-		);
-
+		const resume = await graphcms.request(getResume());
+		
 		return {
 			props: {
-				skills: skills.listItems,
-				languages: languages.listItems,
-				timeline: timeline.timelineItems
+				skills: resume.skills,
+				languages: resume.languages,
+				timeline: resume.timeline
 			}
 		};
 	}
@@ -34,11 +19,10 @@
 <script>
 	import List from '$lib/components/list/List.svelte';
 	import Timeline from '$lib/components/timeline/Timeline.svelte';
-
+	
 	export let skills;
 	export let languages;
 	export let timeline;
-	console.log(timeline);
 </script>
 
 <svelte:head>
@@ -65,11 +49,6 @@
 	<h2>Erfarenhet</h2>
 	<Timeline data={timeline} />
 </section>
-
-<!-- <section id="experiences">
-	<h2>Erfarenhet</h2>
-	<Timeline data={experiences} />
-</section> -->
 
 <section id="languages">
 	<h2>Språk</h2>

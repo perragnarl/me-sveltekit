@@ -10,7 +10,7 @@
 
 <Header type={$page.path === '/' ? 'extended' : 'default'}/>
 
-<main class="max-w-4xl m-auto p-8">
+<main class="max-w-7xl m-auto p-8">
 	<slot />
 </main>
 

@@ -1,44 +1,65 @@
-const queries = {
-	skills: `
+import { gql } from 'graphql-request';
+
+export function getResume() {
+	return gql`
 		{
-			listItems(where: { itemType: skill }) {
+			skills: listItems(where: { itemType: skill }) {
 				name
 				icon
 				background
 				asterisk
 			}
-		}
-	`,
-	languages: `
-		{
-			listItems(where: { itemType: language }) {
+			languages: listItems(where: { itemType: language }) {
 				name
 				icon
 				background
 				asterisk
 			}
-		}
-	`,
-	posts: `
-		{
-			posts {
+			methods: listItems(where: { itemType: method }) {
+				name
+				icon
+				background
+				asterisk
+			}
+			interests: listItems(where: { itemType: interest }) {
+				name
+				icon
+				background
+				asterisk
+			}
+			timeline: timelineItems(orderBy: from_DESC) {
 				title
-				body
+				subtitle
+				from
+				until
+			}
+		}
+	`;
+}
+
+export function getPosts() {
+	return gql`
+		{
+			posts(orderBy: createdAt_DESC) {
+				title
+				intro
 				createdAt
 				slug
 			}
 		}
-	`,
-	timeline: `
+	`;
+}
+
+export function getPost(slug) {
+	return gql`
 		{
-			timelineItems(orderBy: from_DESC) {
-			title
-			subtitle
-			from
-			until
+			post(where: {slug: "${slug}"}) {
+				title
+				createdAt
+				body {
+					html
+				}
 			}
 		}
-	`
-};
-
-export default queries;
+	`;
+}

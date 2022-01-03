@@ -2,7 +2,7 @@
 	export let appearance;
 </script>
 
-<div class={`rounded-full opacity-40 absolut bounce ${appearance}`} />
+<div class="rounded-full opacity-40 absolut bounce {appearance}" />
 
 <style>
 	div {
