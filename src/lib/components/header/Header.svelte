@@ -1,7 +1,7 @@
 <script>
 	import Nav from '$lib/components/nav/Nav.svelte';
 	import Logo from '$lib/components/logo/Logo.svelte';
-	import SpinningSquare from '$lib/components/spinning-square/SpinningSquare.svelte';
+	import BouncingBall from '$lib/components/bouncing-ball/BouncingBall.svelte';
 
 	export let type;
 </script>
@@ -20,9 +20,9 @@
 					<p>Läs mer om min resa nedanför.</p>
 				</div>
 				<div>
-					<SpinningSquare appearance="bg-pale-yellow h-64 w-64 bottom-40 right-0"/>
-					<SpinningSquare appearance="bg-pale-red h-80 w-80 bottom-0 right-0"/>
-					<SpinningSquare appearance="bg-pale-green h-48 w-48 bottom-0 right-60"/>
+					<BouncingBall appearance="bg-pale-yellow h-64 w-64 bottom-40 right-0" />
+					<BouncingBall appearance="bg-pale-red h-80 w-80 bottom-0 right-0" />
+					<BouncingBall appearance="bg-pale-green h-48 w-48 bottom-0 right-60" />
 				</div>
 			</div>
 		{/if}

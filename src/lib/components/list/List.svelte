@@ -11,7 +11,7 @@
 			name={item.name}
 			icon={item.icon}
 			asterisk={item.asterisk}
-			iconBakground={iconBackground}
+			iconBackground={iconBackground}
 		/>		
 	{/each}
 </ul>

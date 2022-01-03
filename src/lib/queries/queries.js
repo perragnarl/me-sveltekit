@@ -29,12 +29,13 @@ const queries = {
 			}
 		}
 	`,
-	post: `
+	timeline: `
 		{
-			post(where: {slug: ""}) {
+			timelineItems(orderBy: from_DESC) {
 			title
-			body
-			createdAt
+			subtitle
+			from
+			until
 			}
 		}
 	`
