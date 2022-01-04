@@ -4,12 +4,13 @@
 	import BouncingBall from '$lib/components/bouncing-ball/BouncingBall.svelte';
 
 	export let type;
+	export let animate = false;
 </script>
 
 <header class="mb-20 flex-wrap px-8 py-20 bg-soft-grey border-[1.5rem] border-white">
-	<div class="max-w-7xl mx-auto">
+	<div class="{animate ? 'focus-in' : ''} max-w-7xl mx-auto">
 		<div class="flex justify-between items-center">
-			<Logo />
+			<Logo animate={animate} />
 			<Nav />
 		</div>
 		{#if type === 'extended'}
@@ -28,3 +29,9 @@
 		{/if}
 	</div>
 </header>
+
+<style>
+	.focus-in {
+		animation-delay: 500ms;
+	}
+</style>

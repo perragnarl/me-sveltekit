@@ -16,6 +16,7 @@
 </script>
 
 <script>
+	import formattedDate from '$lib/utils/formattedDate';
 	import PostTeaser from "$lib/components/post-teaser/PostTeaser.svelte";
 
 	export let posts;
@@ -27,7 +28,7 @@
 
 <div class="max-w-4xl mx-auto">	
 	{#each posts as post}
-		<PostTeaser slug={post.slug} title={post.title} createdAt={post.createdAt}>
+		<PostTeaser slug={post.slug} title={post.title} createdAt={formattedDate(post.createdAt)}>
 			{post.intro}
 		</PostTeaser>
 	{/each}

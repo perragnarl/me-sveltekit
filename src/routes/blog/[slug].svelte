@@ -17,18 +17,30 @@
 </script>
 
 <script>
+	import formattedDate from '$lib/utils/formattedDate';
+	
 	export let post;
-
-	const formattedDate = () => {
-		let date = new Date(post.createdAt);
-		return date.toLocaleDateString('sv-SE');
-	};
 </script>
 
-<h1>{post.title}</h1>
-<time date={formattedDate()} class="mb-4 text-lg block">
-	{formattedDate()}
-</time>
-<div>
-	{@html post.body.html}
-</div>
+<svelte:head>
+	<title>{post.title} - Per-Ragnar Lindfors</title>
+</svelte:head>
+
+<article class="max-w-4xl mx-auto">	
+	<h1>{post.title}</h1>
+	<time date={formattedDate(post.createdAt)} class="mb-4 text-lg block">
+		{formattedDate(post.createdAt)}
+	</time>
+	<div>
+		{@html post.body.html}
+	</div>
+</article>
+
+<style lang="postcss">
+	ul {
+		@apply ml-4;
+	}
+	li {
+		@apply list-disc;
+	}
+</style>

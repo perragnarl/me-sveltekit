@@ -9,6 +9,5 @@
 
 <li class="flex items-center">
 	<Icon name={icon} appearance={'mr-4 ' + iconBackground} />
-	{name}
-	{#if asterisk}*{/if}
+	{name}{asterisk ? '*' : ''}
 </li>

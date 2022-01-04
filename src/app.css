@@ -25,3 +25,12 @@ a {
 p {
 	@apply mb-8;
 }
+article ul {
+	@apply ml-4 pl-4;
+}
+article li {
+	@apply list-disc;
+}
+article blockquote {
+	@apply relative pl-5 before:left-0 before:w-2 before:h-full before:bg-pale-yellow before:absolute;
+}

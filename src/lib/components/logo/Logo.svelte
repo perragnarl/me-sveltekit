@@ -1,5 +1,9 @@
-<div id="logo" class="slide-in-blurred-top">
-	<a href="/">
+<script>
+	export let animate = false;
+</script>
+
+<div id="logo" class={animate ? 'slide-in-blurred-top' : ''}>
+	<a href="/" title="Per-Ragnar Lindfors">
 		<img src="/logo.svg" alt="" />
 	</a>
 </div>
