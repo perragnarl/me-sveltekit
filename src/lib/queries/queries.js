@@ -3,6 +3,11 @@ import { gql } from 'graphql-request';
 export function getResume() {
 	return gql`
 		{
+			about: abouts {
+				body {
+					html
+				}
+			}
 			skills: listItems(where: { itemType: skill }) {
 				name
 				icon

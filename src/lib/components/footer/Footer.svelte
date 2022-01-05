@@ -4,9 +4,9 @@
 </script>
 
 <footer class="bg-charcoal text-beige p-8 border-[1.5rem] border-white">
-	<section class="max-w-7xl mx-auto pt-8 pb-4">
-		<div class="mb-6 flex justify-end">
-			<Logo />
+	<section class="max-w-7xl mx-auto pt-8 pb-16 mb-0">
+		<div class="mb-6 flex justify-center">
+			<Logo animation={false} />
 		</div>
 		<div>
 			<h2>Kontakt</h2>

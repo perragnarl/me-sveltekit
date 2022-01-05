@@ -5,9 +5,12 @@
 	export async function load() {
 		const graphcms = new GraphQLClient('https://api-eu-central-1.graphcms.com/v2/ckxw5joan0l4r01yua0tn5qai/master');
 		const resume = await graphcms.request(getResume());
+
+		console.log(resume.about[0].body.html);
 		
 		return {
 			props: {
+				about: resume.about[0].body.html,
 				skills: resume.skills,
 				languages: resume.languages,
 				timeline: resume.timeline
@@ -20,6 +23,7 @@
 	import List from '$lib/components/list/List.svelte';
 	import Timeline from '$lib/components/timeline/Timeline.svelte';
 	
+	export let about;
 	export let skills;
 	export let languages;
 	export let timeline;
@@ -29,11 +33,11 @@
 	<title>Resumé - Per-Ragnar Lindfors</title>
 </svelte:head>
 
-<!-- <section id="about">
-	<Article title={home.attributes.aboutTitle}>
-		{@html aboutBody}
-	</Article>
-</section> -->
+<section id="about" class="max-w-4xl mx-auto">
+	<article>
+		{@html about}
+	</article>
+</section>
 
 <section id="skills">
 	<h2>Mjukvara</h2>

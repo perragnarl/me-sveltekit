@@ -8,7 +8,11 @@
 </script>
 
 <header class="mb-20 flex-wrap px-8 py-20 bg-soft-grey border-[1.5rem] border-white">
-	<div class="{animate ? 'focus-in' : ''} max-w-7xl mx-auto">
+	<div class={[
+			'max-w-7xl mx-auto',
+			animate ? 'focus-in' : ''
+		].join(' ')}
+	>
 		<div class="flex justify-between items-center">
 			<Logo animate={animate} />
 			<Nav />

@@ -20,6 +20,7 @@
 	import formattedDate from '$lib/utils/formattedDate';
 	
 	export let post;
+	let date = formattedDate(post.createdAt);
 </script>
 
 <svelte:head>
@@ -28,8 +29,8 @@
 
 <article class="max-w-4xl mx-auto">	
 	<h1>{post.title}</h1>
-	<time date={formattedDate(post.createdAt)} class="mb-4 text-lg block">
-		{formattedDate(post.createdAt)}
+	<time date={date} class="mb-4 text-lg block">
+		{date}
 	</time>
 	<div>
 		{@html post.body.html}
